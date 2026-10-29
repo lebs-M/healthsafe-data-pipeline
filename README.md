@@ -48,6 +48,18 @@ pytest                                     # unit tests (integration test skippe
 DATABASE_URL=postgresql+psycopg://healthsafe:healthsafe@localhost:5432/healthsafe pytest   # everything
 ```
 
+Unit tests are split by responsibility:
+
+| File | Covers |
+|---|---|
+| `tests/test_extract.py` | header trimming, expected columns, empty files |
+| `tests/test_clean.py` | placeholders, normalisation, bed boundaries, duplicates, rejections |
+| `tests/test_quality.py` | completeness/score maths, capacity counts, report writing |
+| `tests/test_pipeline.py` | layer order and report hand-off (DB calls mocked) |
+| `tests/test_cli.py` | `--source`, default source and failure exit codes |
+| `tests/test_db.py` | pandas NA -> SQL NULL conversion and engine setup |
+| `tests/test_pipeline_integration.py` | full PostgreSQL loads, reruns, rejected rows and audit trail |
+
 CI (`.github/workflows/ci.yml`) starts a PostgreSQL service, runs all tests, then runs the pipeline.
 
 ## Cleaning rules and decisions
