@@ -73,3 +73,5 @@ CI (`.github/workflows/ci.yml`) starts a PostgreSQL service, runs all tests, the
 
 Ingest from the ingestion-service REST API as a second source, add staffing/alert-level data for a star schema
 (`dim_ward`, `fact_staffing`), schedule the run (cron / GitHub Actions `schedule`), add `ruff` to CI.
+
+verification WTC-QKY56JRN
