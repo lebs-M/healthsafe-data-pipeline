@@ -1,0 +1,19 @@
+ward_id, Wing ,department,beds_available
+W-01, East Wing ,Cardiology,3
+w-02,West Wing,paediatrics,N/A
+W-03 ,east wing,Cardiology,0
+W-04,North Wing,Oncology,-1
+W-05,East Wing,Paediatrics,5
+w-05,east wing ,PAEDIATRICS,five
+W-06,South Wing,Radiology,2
+W-07,West Wing,cardiology,TBD
+W-08,,Oncology,4
+W-09,North Wing,ICU,N/A
+W-10,South  Wing,Maternity,1
+W-11,East Wing,Pediatrics,3
+w-12,west wing,Cardiology,full
+W-13,North Wing,Oncology,2023
+W-14,South Wing,radiology,-2
+W-15,East Wing,ICU,unknown
+W-16,West Wing ,Maternity,0
+w-17,North wing,oncology,6
