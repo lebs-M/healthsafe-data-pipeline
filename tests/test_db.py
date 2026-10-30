@@ -18,7 +18,7 @@ def test_nullable_turns_pandas_missing_values_into_sql_null():
     assert result.loc[0, "flag"] is True
     assert result.loc[0, "mixed"] is None
     assert result.loc[1, "mixed"] == "value"
-    assert frame.loc[0, "mixed"] is pd.NA
+    assert pd.isna(frame.loc[0, "mixed"])
 
 
 def test_get_engine_uses_the_supplied_url():
