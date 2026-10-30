@@ -34,3 +34,5 @@ jobs:
         run: pytest -v
       - name: Run the pipeline end to end
         run: python -m healthsafe_pipeline
+        env:
+          PYTHONPATH: src
